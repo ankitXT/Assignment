@@ -100,19 +100,42 @@
                                     <outlet property="delegate" destination="XKd-2x-e7Y" id="jAI-qV-njX"/>
                                 </connections>
                             </collectionView>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vjL-58-UA8">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="suggestionCell" id="cNh-vY-deI">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cNh-vY-deI" id="gnu-0Z-kW0">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="XKd-2x-e7Y" id="FK1-8U-0GH"/>
+                                    <outlet property="delegate" destination="XKd-2x-e7Y" id="71H-4g-rhM"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="8s9-Fg-sw7" firstAttribute="bottom" secondItem="vjL-58-UA8" secondAttribute="bottom" id="9lK-yt-JvP"/>
                             <constraint firstItem="8s9-Fg-sw7" firstAttribute="trailing" secondItem="yjy-fp-wVr" secondAttribute="trailing" id="D1q-f8-EkX"/>
+                            <constraint firstItem="vjL-58-UA8" firstAttribute="top" secondItem="8s9-Fg-sw7" secondAttribute="top" id="KAx-H9-hhf"/>
+                            <constraint firstItem="vjL-58-UA8" firstAttribute="leading" secondItem="8s9-Fg-sw7" secondAttribute="leading" id="Ox7-90-Gza"/>
                             <constraint firstItem="yjy-fp-wVr" firstAttribute="top" secondItem="8s9-Fg-sw7" secondAttribute="top" id="SCP-it-bD1"/>
                             <constraint firstItem="8s9-Fg-sw7" firstAttribute="bottom" secondItem="yjy-fp-wVr" secondAttribute="bottom" id="Za4-a9-UBL"/>
                             <constraint firstItem="yjy-fp-wVr" firstAttribute="leading" secondItem="8s9-Fg-sw7" secondAttribute="leading" id="hI9-v6-hPE"/>
+                            <constraint firstItem="8s9-Fg-sw7" firstAttribute="trailing" secondItem="vjL-58-UA8" secondAttribute="trailing" id="lUK-hX-AB7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8s9-Fg-sw7"/>
                     </view>
                     <navigationItem key="navigationItem" id="R8H-xW-cbi"/>
                     <connections>
                         <outlet property="collectionView" destination="yjy-fp-wVr" id="33Y-iQ-Arx"/>
+                        <outlet property="suggestionTableView" destination="vjL-58-UA8" id="Thz-BT-oqY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JWR-Ef-2S8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

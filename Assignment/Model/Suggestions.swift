@@ -18,8 +18,18 @@ class Suggestions {
             return UserDefaults.standard.object(forKey: suggestionsKey) as? [String] ?? []
         }
         set{
-            UserDefaults.standard.set(Array(newValue.prefix(10)), forKey: suggestionsKey)
+            UserDefaults.standard.set(newValue, forKey: suggestionsKey)
         }
     }
 
+    func addNewSuggestion(_ suggestion: String) {
+        var tempArray = recentlySearched
+        if tempArray.contains(suggestion) {
+            let index = tempArray.firstIndex(of: suggestion)!
+            tempArray.remove(at: index)
+        }
+        tempArray.insert(suggestion, at: 0)
+
+        recentlySearched = Array(tempArray.prefix(10))
+    }
 }

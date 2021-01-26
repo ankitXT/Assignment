@@ -7,4 +7,5 @@ target 'Assignment' do
 
   # Pods for Assignment
   pod 'SDWebImage'
+  pod 'Firebase/Crashlytics'
 end

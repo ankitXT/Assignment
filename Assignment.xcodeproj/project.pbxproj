@@ -14,6 +14,8 @@
 		0470F06425BFFFFE00FFF6D2 /* CustomFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470F06325BFFFFE00FFF6D2 /* CustomFooterView.swift */; };
 		0470F06625C010D800FFF6D2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470F06525C010D800FFF6D2 /* DetailViewController.swift */; };
 		0470F06B25C022B700FFF6D2 /* Suggestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470F06A25C022B700FFF6D2 /* Suggestions.swift */; };
+		0470F06D25C03D9C00FFF6D2 /* MainDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470F06C25C03D9C00FFF6D2 /* MainDataSource.swift */; };
+		0470F07225C04C4C00FFF6D2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0470F07125C04C4B00FFF6D2 /* GoogleService-Info.plist */; };
 		3FB4374C35EA4C8358817AFE /* Pods_Assignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F122D71E59485DF376EC728 /* Pods_Assignment.framework */; };
 		84ABB42025A83ECC00273DDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ABB41F25A83ECC00273DDE /* AppDelegate.swift */; };
 		84ABB42225A83ECC00273DDE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ABB42125A83ECC00273DDE /* SceneDelegate.swift */; };
@@ -31,6 +33,8 @@
 		0470F06325BFFFFE00FFF6D2 /* CustomFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFooterView.swift; sourceTree = "<group>"; };
 		0470F06525C010D800FFF6D2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		0470F06A25C022B700FFF6D2 /* Suggestions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Suggestions.swift; sourceTree = "<group>"; };
+		0470F06C25C03D9C00FFF6D2 /* MainDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataSource.swift; sourceTree = "<group>"; };
+		0470F07125C04C4B00FFF6D2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2FD14F8AAADFE3127BBDD1E6 /* Pods-Assignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Assignment.debug.xcconfig"; path = "Target Support Files/Pods-Assignment/Pods-Assignment.debug.xcconfig"; sourceTree = "<group>"; };
 		3F122D71E59485DF376EC728 /* Pods_Assignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Assignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84ABB41C25A83ECC00273DDE /* Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,17 +68,27 @@
 			path = "Collection Cell";
 			sourceTree = "<group>";
 		};
-		0470F06925C01F3300FFF6D2 /* Utility */ = {
+		0470F06E25C03DA600FFF6D2 /* Home Screen */ = {
 			isa = PBXGroup;
 			children = (
-				0470F06A25C022B700FFF6D2 /* Suggestions.swift */,
+				0470F06025BFFF2100FFF6D2 /* MainViewController.swift */,
+				0470F06C25C03D9C00FFF6D2 /* MainDataSource.swift */,
 			);
-			path = Utility;
+			path = "Home Screen";
+			sourceTree = "<group>";
+		};
+		0470F06F25C03DB400FFF6D2 /* Detail Screen */ = {
+			isa = PBXGroup;
+			children = (
+				0470F06525C010D800FFF6D2 /* DetailViewController.swift */,
+			);
+			path = "Detail Screen";
 			sourceTree = "<group>";
 		};
 		84ABB41325A83ECC00273DDE = {
 			isa = PBXGroup;
 			children = (
+				0470F07125C04C4B00FFF6D2 /* GoogleService-Info.plist */,
 				84ABB41E25A83ECC00273DDE /* Assignment */,
 				84ABB41D25A83ECC00273DDE /* Products */,
 				D9D3FA14EF2C51D23E0AEA7A /* Pods */,
@@ -95,7 +109,6 @@
 			children = (
 				84ABB41F25A83ECC00273DDE /* AppDelegate.swift */,
 				84ABB42125A83ECC00273DDE /* SceneDelegate.swift */,
-				0470F06925C01F3300FFF6D2 /* Utility */,
 				84ABB44725A840EB00273DDE /* Networking */,
 				84ABB43525A83FE700273DDE /* Model */,
 				84ABB43425A83FC400273DDE /* Views */,
@@ -109,8 +122,8 @@
 		84ABB43325A83FA800273DDE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0470F06025BFFF2100FFF6D2 /* MainViewController.swift */,
-				0470F06525C010D800FFF6D2 /* DetailViewController.swift */,
+				0470F06E25C03DA600FFF6D2 /* Home Screen */,
+				0470F06F25C03DB400FFF6D2 /* Detail Screen */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -130,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				0470F05A25BFFC3A00FFF6D2 /* PixabayPhotos.swift */,
+				0470F06A25C022B700FFF6D2 /* Suggestions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -172,6 +186,7 @@
 				84ABB41925A83ECC00273DDE /* Frameworks */,
 				84ABB41A25A83ECC00273DDE /* Resources */,
 				1E06ABC620408B30005F2F82 /* [CP] Embed Pods Frameworks */,
+				0470F07025C04A2D00FFF6D2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -220,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0470F07225C04C4C00FFF6D2 /* GoogleService-Info.plist in Resources */,
 				84ABB42C25A83ECE00273DDE /* LaunchScreen.storyboard in Resources */,
 				84ABB42925A83ECE00273DDE /* Assets.xcassets in Resources */,
 				84ABB42725A83ECC00273DDE /* Main.storyboard in Resources */,
@@ -229,6 +245,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0470F07025C04A2D00FFF6D2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
 		1E06ABC620408B30005F2F82 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -282,6 +316,7 @@
 				84ABB42225A83ECC00273DDE /* SceneDelegate.swift in Sources */,
 				0470F05B25BFFC3A00FFF6D2 /* PixabayPhotos.swift in Sources */,
 				84ABB44625A840E500273DDE /* NetworkManager.swift in Sources */,
+				0470F06D25C03D9C00FFF6D2 /* MainDataSource.swift in Sources */,
 				0470F05925BFF20000FFF6D2 /* PixabayProvider.swift in Sources */,
 				0470F06425BFFFFE00FFF6D2 /* CustomFooterView.swift in Sources */,
 				0470F06225BFFF2100FFF6D2 /* MainViewController.swift in Sources */,
@@ -430,12 +465,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INFOPLIST_FILE = Assignment/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Ankit.Assignment;
+				PRODUCT_BUNDLE_IDENTIFIER = com.assignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -453,7 +489,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Ankit.Assignment;
+				PRODUCT_BUNDLE_IDENTIFIER = com.assignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
